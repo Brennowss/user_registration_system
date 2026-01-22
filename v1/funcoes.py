@@ -30,3 +30,12 @@ def procurar_usuario(usuarios):
             return True
     return False
 
+def remover_user(usuarios):
+    nome_remocao = input('Digite o nome que deseja remover')
+    for u in usuarios:
+        if u['nome'].lower() == nome_remocao.lower():
+            usuarios.remove(u)
+            return True
+    print('Não foi possível remover esse usuário')    
+    return False
+

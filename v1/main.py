@@ -1,4 +1,4 @@
-from funcoes import cadastrar_usuario, listar_usuarios, procurar_usuario
+from funcoes import cadastrar_usuario, listar_usuarios, procurar_usuario, remover_user
 
 usuarios = []
 
@@ -7,6 +7,7 @@ while True:
 1- Cadastrar usuário
 2- Listar usuários
 3- Procurar usuário
+4- Remover usuário
 0- Encerrar programa
 ''')
 
@@ -25,5 +26,9 @@ while True:
     elif opcao == '3':
         resultado = procurar_usuario(usuarios)
         print('Usuário encontrado!')
-    else:
-        print('Não encontrado')
+
+    elif opcao == '4':
+        if remover_user(usuarios):
+            print('usuário apagado')
+        else:
+            print('não apagado')
