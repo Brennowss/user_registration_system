@@ -19,7 +19,7 @@ Project Structure
 
 user_registration_system/
 ├── main.py # Application entry point and menu logic
-├── users.py # User-related functions (register, list, search)
+├── funcoes.py # User-related functions (register, list, search)
 └── README.md
 
 The project is structured to keep responsibilities separated and readable, following basic modularization practices.
