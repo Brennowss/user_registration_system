@@ -39,3 +39,11 @@ def remover_user(usuarios):
     print('Não foi possível remover esse usuário')    
     return False
 
+def salvar_dados(usuario):
+    try:
+        with open("dados.txt", "a") as dados:
+            line = f"{usuario['nome']}|{usuario['idade']}|{usuario['email']}\n"
+            dados.write(line)
+    except Exception:
+        print('Alguma coisa deu errada alek')
+

@@ -1,4 +1,4 @@
-from funcoes import cadastrar_usuario, listar_usuarios, procurar_usuario, remover_user
+from funcoes import cadastrar_usuario, listar_usuarios, procurar_usuario, remover_user, salvar_dados
 
 usuarios = []
 
@@ -19,6 +19,8 @@ while True:
     elif opcao == '1':
         novo_user = cadastrar_usuario()
         usuarios.append(novo_user)
+        salvar_dados(novo_user)
+        
     
     elif opcao == '2':
         listar_usuarios(usuarios)
@@ -32,3 +34,4 @@ while True:
             print('usuário apagado')
         else:
             print('não apagado')
+    
