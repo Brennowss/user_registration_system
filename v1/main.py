@@ -1,6 +1,6 @@
-from funcoes import cadastrar_usuario, listar_usuarios, procurar_usuario, remover_user, salvar_dados
+from funcoes import cadastrar_usuario, listar_usuarios, procurar_usuario, remover_user, salvar_dados, carregar_txt
 
-usuarios = []
+usuarios = carregar_txt()
 
 while True:
     opcao = input('''
@@ -23,6 +23,7 @@ while True:
         
     
     elif opcao == '2':
+        usuarios = carregar_txt()
         listar_usuarios(usuarios)
 
     elif opcao == '3':

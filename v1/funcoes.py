@@ -47,3 +47,18 @@ def salvar_dados(usuario):
     except Exception:
         print('Alguma coisa deu errada alek')
 
+def carregar_txt():
+    usuarios = []
+    try:
+        with open("dados.txt", "r") as dados:
+            for line in dados:
+                nome, idade, email = line.strip().split("|")
+                usuarios.append({
+                    'nome': nome,
+                    'idade': idade,
+                    'email': email,
+                })
+    except FileExistsError:
+        pass
+    return usuarios
+
